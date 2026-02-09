@@ -1,0 +1,253 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Todo este primer bloque carga los paquetes para configurar el archivo.                         %   
+% No es necesario que los modifiquen.                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper]{report}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{csquotes}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[style=numeric, backend=biber]{biblatex}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{esdiff}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{enumitem}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\usepackage{caption}
+% Configura el documento para usar una fuente sans-serif
+\renewcommand{\familydefault}{\sfdefault}
+% Configuraciones de las leyendas
+\captionsetup[figure]{labelformat=simple, labelsep=none, labelfont={bf}, textfont={it}, singlelinecheck=off}
+\renewcommand{\figurename}{Figura}
+\DeclareCaptionFormat{custom}{#1#2\\#3} 
+\captionsetup[figure]{format=custom}
+\captionsetup[table]{labelformat=simple, labelsep=none, labelfont={bf}, textfont={it}, singlelinecheck=off}
+\renewcommand{\tablename}{Tabla}
+\captionsetup[table]{format=custom}
+% Recursos bibliográficos
+\addbibresource{referencias.bib}
+% Formato de página
+\geometry{a4paper, left=3.5cm,right=2.54cm,top=2.54cm,bottom=2.54cm}
+\setlength{\parindent}{0.5cm}\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % no line in header area
+\fancyfoot[R]{\thepage} % page number in the right footer
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot[R]{\thepage} % page number in the right footer
+}
+
+\begin{document}
+\titleformat{\chapter}[block]
+  {\centering\bfseries\Large} % Format: centered, bold, large size
+  { } % Chapter label
+  {5pt} % Space between label and title
+  {\MakeUppercase} % Title formatting
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt} % Adjust spacing: {left}{before}{after}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A partir de acá empieza el documento propiamente dicho. Esto es lo que tienen que ir modificando %
+% de acuerdo al informe que quieren hacer.                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%n Esta es la información de la portada %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+\renewcommand{\thepage}{\expandafter{\romannumeral\value{page}}}
+\begin{titlepage}
+    \includegraphics[width=0.8\textwidth]{logo-unq.png}\\[0.3cm]
+    \centering
+    {\scshape\Huge Departamento de \\ Ciencia y Tecnología \par}
+    \vspace{0.3cm}
+    {\scshape\Large Asignatura: Fisicoquímica \par}
+    \vspace{0.3cm}
+    \vfill
+    {\LARGE\bfseries TÍTULO DEL INFORME EN MAYÚSCULAS \par} % Esto lo deben modificar para incluir el título real
+    
+    {\Large\bfseries Nombre - Estudiante \par} % Esto lo deben modificar para incluir sus nombres
+    \vfill
+    
+    {\large\bfseries Docentes \par}
+    {\large Juliana Palma, Gustavo Pierdominici-Sottile, Agustín Ormazábal}
+    \vspace{1cm}
+    
+    {\large Bernal, Buenos Aires, Argentina}\\
+    {\large Fecha:\par}                         % Esto lo deben modificar para incluir la fecha
+    \vspace{1cm}
+ 
+\let\cleardoublepage\clearpage
+\tableofcontents
+\justifying
+
+\chapter{TÍTULO DEL INFORME}            % Esto lo deben modificar para incluir el título real
+\renewcommand{\baselinestretch}{1.5} 
+\pagenumbering{arabic}
+
+
+\section{Introducción}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Todo el contenido a continuación debe ser modificado acorde al tema del informe %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La UNQ fue creada mediante la Ley Nº 23.749 del Congreso de la Nación \cite{ley_coparticipacion_federal_1990}. Su sanción data del 29 de septiembre de 1989, aunque fue promulgada el 23 de octubre de ese año. Su normalización sucedió poco más de tres años después, el 12 de diciembre de 1992.
+
+El edificio de la Universidad fue construido sobre terrenos donados por la empresa textil Fabril Financiera y abrió sus puertas con sólo 10 aulas para sus primeros mil alumnos. Desde entonces, el crecimiento edilicio ha sido acelerado.
+
+En 1999 inauguró su primera aula virtual, con lo cual la UNQ originó la incursión de la Universidad pública en Internet. A través del Programa Universidad Virtual Quilmes, la UNQ se constituyó en una Universidad pionera en materia de educación no presencial en Latinoamérica.
+
+Desde entonces, estudiantes de todas partes del mundo pueden acceder a una capacitación en sus propios tiempos, sin la necesidad de coincidir de manera sincrónica con los profesores, ni trasladarse para asistir a clases, sino simplemente por medio del acceso a la Web.
+
+\section{Materiales y Métodos}
+
+La Universidad tiene por misión la producción, enseñanza y difusión de conocimientos del más alto nivel en un clima de igualdad y pluralidad. Las funciones básicas de la Universidad son la docencia, la investigación, la extensión, la formación de recursos humanos, el desarrollo tecnológico, la innovación productiva y la promoción de la cultura.
+
+\subsection{Principios}
+
+La Universidad:
+
+\begin{itemize}
+\item Garantiza la gratuidad de la enseñanza de grado en todas las carreras ofrecidas en su modalidad presencial.
+
+\item Asegura la igualdad de oportunidades y posibilidades.
+
+\item Hace efectiva la corresponsabilidad de todos los miembros de la comunidad universitaria.
+
+\item Tiende a una mayor articulación con los demás niveles de la enseñanza y con otras Universidades Nacionales.
+
+\item Mantiene la vinculación y el perfeccionamiento de los egresados.
+
+\item Educa en el respeto y la defensa de los derechos humanos, la confraternidad y la paz entre los pueblos.
+
+\item Garantiza en todos los ámbitos la más amplia libertad de juicios, criterios y orientaciones filosóficas y científicas, promoviendo la reflexión crítica del conocimiento.
+
+\item Asegura el perfeccionamiento del personal docente y administrativo y de servicios, en las áreas científica, profesional, técnica o de servicios, en todos los aspectos que correspondiesen para su más adecuada formación.
+
+\item Promueve y desarrolla los estudios de posgrado, facilitando a los graduados de la Universidad el acceso a ellos.
+
+\item Da a publicidad los actos de gobierno. El Consejo Superior establece las formas en que dichos actos son dados a publicidad y puestos a disposición pública.
+
+\end{itemize}
+
+\section{Resultados}
+
+El gobierno y la administración de la Universidad son ejercidos por todos los miembros de la comunidad universitaria, a través de:
+ 
+\begin{enumerate}[label=\arabic*.]
+ 
+\item La Asamblea Universitaria
+\item El Consejo Superior.
+\item El Rector o el Vicerrector.
+\item Los Consejos Departamentales.
+\item Los Consejos de Escuelas Universitarias.
+\item Los Directores o Vicedirectores de Departamento.
+\item Los Directores de Escuelas Universitarias.
+\item Los Directores de las Carreras y las Diplomaturas.
+\end{enumerate}
+
+El ejercicio de cargos electivos en representación de los estamentos es incompatible con el ejercicio de funciones ejecutivas en la Universidad.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este es un ejemplo de cómo incluir figuras %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+\begin{figure}[h!]
+\caption{\raggedright Resumen de indicadores UNQ 2023. Imagen extraída de: \url{https://transparencia.unq.edu.ar/?page_id=679}} % Modificar en función del contenido de la imagen
+\label{fig:indicadores}
+    \centering
+    \includegraphics[width=1 \linewidth]{Figura2.png} % Modificar en función del nombre del archivo.
+\end{figure} 
+
+\begin{figure}[h!]
+\caption{\raggedright Procedencia de las personas inscriptas a la UNQ en el 2024. Imagen extraída de: \url{https://transparencia.unq.edu.ar/?page_id=679}}
+\label{fig:procedencia}
+    \centering
+    \includegraphics[width=1 \linewidth]{Figura1.png}
+\end{figure} 
+
+\vspace{2cm}
+
+Las imágenes \ref{fig:indicadores} y \ref{fig:procedencia} fueron extraídas del Portal de Transparencia de la UNQ, disponible en \url{https://transparencia.unq.edu.ar/?page_id=679}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este es un ejemplo de cómo incluir una tabla %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{table}[htbp]
+    \small\sffamily
+    \centering
+    \begin{tabular}{ccccc}
+    \textcolor{black}{\textbf{Nucleótido}} & \textcolor{black}{\textbf{$\beta$1$_{B}$}} &  \textcolor{black}{\textbf{$\beta$5$_{A}$}}& \textcolor{black}{\textbf{$\beta$4$_{A}$}} &
+    \textcolor{black}{\textbf{Loop $\beta$4$_{A}$-$\beta$5$_{A}$}}\\ 
+    \bottomrule[2pt] 
+    \textbf{A$_{38}$} & Thr5 & Arg44 & - & -\\
+    \textcolor{black}{\textbf{G$_{39}$}} & \textcolor{black}{\textbf{-}} & \textcolor{black}{Val42, His43,  Arg44} & \textcolor{black}{-} & \textcolor{black}{-}\\
+    \textbf{G$_{40}$} & Met1 & Val40, Val42 & Ala36, & Pro37 , Lys38\\
+    \textcolor{black}{\textbf{A$_{41}$}} & \textcolor{black}{Met1, Ile3 (twice)} &  \textcolor{black}{\textbf{-}} & \textcolor{black}{\textbf{-}} & \textcolor{black}{\textbf{-}} \\
+    \textbf{C$_{42}$} & - & - & Arg31 & - \\
+    \end{tabular}
+    \caption{Interacciones de puente de hidrógeno del sistema.}
+    \label{tab:tabla}
+    \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este es un ejemplo de cómo incluir una ecuación %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}
+P \left(Y_{it}=1|X_{it}, \alpha_{i}\right) = \Phi\left(X_{it}\beta+\alpha_i\right)
+\end{equation} \par
+
+
+\begin{equation}
+    L(\beta, \alpha) = \prod_{i=1}^{N} \prod_{t=1}^{T} \left[ \Phi(X_{it} \beta + \alpha_i)^{Y_{it}} \left(1 - \Phi(X_{it} \beta + \alpha_i)\right)^{1 - Y_{it}} \right]
+\end{equation} \par
+
+\begin{equation}
+    \ell(\beta, \alpha) = \sum_{i=1}^{N} \sum_{t=1}^{T} \left[ Y_{it} \log \Phi(X_{it} \beta + \alpha_i) + (1 - Y_{it}) \log \left(1 - \Phi(X_{it} \beta + \alpha_i)\right) \right]
+\end{equation}
+
+\begin{equation}
+    \frac{\partial P(Y_{it}=1 | X_{it}, \alpha_j)}{\partial X_{itj}} = \phi(\beta_0+\beta_1 X_{it1}+\beta_2 X_{it2} + \cdots + \beta_k X_{itk}+\alpha_i)\cdot  \beta_j
+\end{equation}
+
+\section{Conclusiones}
+
+Universidad Nacional de Quilmes cumple con la Ley N° 27.275 de Acceso a la Información Pública \cite{ley_acceso_informacion_publica_2016}, que tiene por objeto garantizar el efectivo ejercicio del derecho de acceso a la información pública, promover la participación ciudadana y la transparencia de la gestión pública.
+En su artículo 32°, la ley establece la obligación de publicar activamente información de manera clara, estructurada y entendible, procurando remover toda barrera que obstaculice o dificulte su reutilización por parte de terceros y permitiéndole a la ciudadanía conocer qué hace el Estado.
+Entre otros documentos, pueden encontrar información sobre las auditorías de la Universidad a través del siguiente enlace: \url{https://transparencia.unq.edu.ar/}.
+
+
+
+\printbibliography
+
+\end{document}
